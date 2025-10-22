@@ -296,8 +296,11 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  const str = String(num);
+  const digits = str.split('');
+  const sum = digits.reduce((acc, digit) => acc + Number(digit), 0);
+  return sum;
 }
 
 /**
